@@ -22,6 +22,11 @@
                         "http://localhost:56668/silent-renew.html"
                     },
 
+                    PostLogoutRedirectUris = new List<string>
+                    {
+                        "http://localhost:56668/index.html"
+                    },
+
                     AllowedCorsOrigins = new List<string>
                     {
                         "http://localhost:56668"

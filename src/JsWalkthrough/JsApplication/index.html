@@ -30,6 +30,7 @@
                     <li><a href="index.html" class="btn btn-primary">Home</a></li>
                     <li><button type="button" class="btn btn-default js-login">Login</button></li>
                     <li><button type="button" class="btn btn-default js-call-api">Call API</button></li>
+                    <li><button type="button" class="btn btn-danger js-logout">Logout</button></li>
                 </ul>
             </div>
         </div>
@@ -91,6 +92,8 @@
             response_type: 'id_token token',
             scope: 'openid profile email api',
 
+            post_logout_redirect_uri: 'http://localhost:56668/index.html',
+
             filter_protocol_claims: true
         };
 
@@ -132,6 +135,10 @@
                     response: error.responseJSON
                 });
             });
+        });
+
+        $('.js-logout').click(function () {
+            manager.redirectForLogout();
         });
     </script>
 </body>
