@@ -18,7 +18,8 @@
 
                     RedirectUris = new List<string>
                     {
-                        "http://localhost:56668/popup.html"
+                        "http://localhost:56668/popup.html",
+                        "http://localhost:56668/silent-renew.html"
                     },
 
                     AllowedCorsOrigins = new List<string>
@@ -26,7 +27,8 @@
                         "http://localhost:56668"
                     },
 
-                    AllowAccessToAllScopes = true
+                    AllowAccessToAllScopes = true,
+                    AccessTokenLifetime = 70
                 }
             };
         }

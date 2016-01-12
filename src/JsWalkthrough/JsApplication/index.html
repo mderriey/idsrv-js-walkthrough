@@ -85,21 +85,28 @@
             client_id: 'js',
             popup_redirect_uri: 'http://localhost:56668/popup.html',
 
+            silent_renew: true,
+            silent_redirect_uri: 'http://localhost:56668/silent-renew.html',
+
             response_type: 'id_token token',
             scope: 'openid profile email api',
 
-            // this will allow all the OIDC protocol claims to be visible in the window. normally a client app
-            // wouldn't care about them or want them taking up space
             filter_protocol_claims: true
         };
 
         var manager = new OidcTokenManager(settings);
 
+        manager.addOnTokenObtained(function () {
+            display('.js-access-token', manager.access_token && { access_token: manager.access_token, expires_in: manager.expires_in } || '');
+        });
+
         $('.js-login').click(function () {
             manager.openPopupForTokenAsync()
                 .then(function () {
                     display('.js-id-token', manager.profile);
-                    display('.js-access-token', manager.access_token && { access_token: manager.access_token, expires_in: manager.expires_in } || '');
+
+                    // Removed
+                    // display('.js-access-token', manager.access_token && { access_token: manager.access_token, expires_in: manager.expires_in } || '');
                 }, function (error) {
                     console.error(error);
                 });
