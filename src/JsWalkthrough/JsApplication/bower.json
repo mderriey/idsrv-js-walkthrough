@@ -1,0 +1,8 @@
+{
+  "name": "JsWalkthrough",
+  "devDependencies": {
+    "oidc-token-manager": "~1.0.1",
+    "jquery": "~2.2.0",
+    "bootstrap": "~3.3.6"
+  }
+}

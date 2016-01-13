@@ -3,7 +3,7 @@
 <head>
     <title>JS Application</title>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="content/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <style>
         .main-container {
             padding-top: 70px;
@@ -65,11 +65,12 @@
         </div>
     </div>
 
-    <script src="content/js/jquery-2.1.4.js"></script>
-    <script src="content/js/bootstrap.js"></script>
-    <script src="content/js/oidc.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/oidc-token-manager/dist/oidc-token-manager.js"></script>
 
     <script>
+        // helper function to show data to the user
         function display(selector, data) {
             if (data && typeof data === 'string') {
                 data = JSON.parse(data);

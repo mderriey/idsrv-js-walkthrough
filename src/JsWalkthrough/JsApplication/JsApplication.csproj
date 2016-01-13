@@ -67,11 +67,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-    <Content Include="content\css\bootstrap.css.map" />
-    <Content Include="content\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="content\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="content\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="bower.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -80,11 +76,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="content\css\bootstrap.css" />
-    <Content Include="content\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="content\js\bootstrap.js" />
-    <Content Include="content\js\jquery-2.1.4.js" />
-    <Content Include="content\js\oidc.js" />
     <Content Include="index.html" />
     <Content Include="popup.html" />
     <Content Include="silent-renew.html" />
