@@ -18,18 +18,18 @@
 
                     RedirectUris = new List<string>
                     {
-                        "http://localhost:56668/popup.html",
-                        "http://localhost:56668/silent-renew.html"
+                        "https://localhost:44301/popup.html",
+                        "https://localhost:44301/silent-renew.html"
                     },
 
                     PostLogoutRedirectUris = new List<string>
                     {
-                        "http://localhost:56668/index.html"
+                        "https://localhost:44301/index.html"
                     },
 
                     AllowedCorsOrigins = new List<string>
                     {
-                        "http://localhost:56668"
+                        "https://localhost:44301"
                     },
 
                     AllowAccessToAllScopes = true,
